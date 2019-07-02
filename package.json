@@ -1,0 +1,9 @@
+{
+  "name": "kissing-websites",
+  "version": "1.0.0",
+  "description": "What if websites could kiss?",
+  "main": "index.js",
+  "repository": "https://github.com/devinhalladay/kissing-websites.git",
+  "author": "Devin Halladay <devin@devinhalladay.com>",
+  "license": "MIT"
+}
