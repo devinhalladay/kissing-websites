@@ -20,6 +20,26 @@ var radiusY = Math.min(currentDivHeight , radius); // set vertical radius to be 
 radius = Math.min(radiusX, radiusY); // now set the radius of the circle equal to the minimum of the two values so that it is a perfect circle
 
 context.arc(0, 0, radius, 0, 2*Math.PI, false); // use new radius to draw a brand new circle 
+
+document.addEventListener("keydown", handleKeyPress);
+
+function handleKeyPress(e) {
+  e = e || window.event;
+  if (e.keyCode == '37') { // left arrow
+    handleLeftArrowPress(e);
+  }
+  else if (e.keyCode == '39') { // right arrow
+    handleLeftArrowPress(e);
+  }
+}
+
+function handleLeftArrowPress(e) {
+  console.log("left arrow pressed");
+}
+
+function handleRightArrowPress(e) {
+  console.log("right arrow pressed");
+}
 </script> 
 
 </body>
