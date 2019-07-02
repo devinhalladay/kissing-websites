@@ -2,9 +2,9 @@
 <head><link rel="stylesheet" type="text/css" href="style.css"></head>
 <html>
 <body>
-
+<div>
 <canvas id="myCanvas" width="1200" height="800">
-Your browser does not support the HTML5 canvas tag.</canvas>
+Your browser does not support the HTML5 canvas tag.</canvas></div>
 
 <script>
 var c = document.getElementById("myCanvas");
@@ -13,13 +13,15 @@ ctx.beginPath();
 ctx.arc(400, 400, 300, 0, 2 * Math.PI);
 ctx.stroke();
 
-var radius = 300; // set default radius to start with
-var radiusX = Math.min(currentDivWidth , radius); // set horizontal radius to be atleast as wide as width of div
-var radiusY = Math.min(currentDivHeight , radius); // set vertical radius to be atleast as high as height of div
+radius = Math.min(radiusX, radiusY);
+// here radiusX and radiusY will be currentDivWidth,currentDivHeight resp.
+ctx.arc(0, 0, radius, 0, 2*Math.PI);
 
-radius = Math.min(radiusX, radiusY); // now set the radius of the circle equal to the minimum of the two values so that it is a perfect circle
-
-context.arc(0, 0, radius, 0, 2*Math.PI, false); // use new radius to draw a brand new circle 
+function myFunction() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
 </script> 
 
 </body>
